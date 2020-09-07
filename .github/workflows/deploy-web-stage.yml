@@ -1,4 +1,4 @@
-name: deploy-web-stage
+name: Deploy Web Stage
 on:
   push:
     branches: master

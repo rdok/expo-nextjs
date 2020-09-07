@@ -1,9 +1,12 @@
 # Expo NextJS Template
-[![expo-stage-blue](https://img.shields.io/badge/Mobile%20Apps-Stage-blue?style=flat-square&logo=expo)](https://expo.io/@rdok/expo-nextjs-template?release-channel=stage)
+[![web-stage](https://img.shields.io/badge/Web-Stage-blue?style=flat-square&logo=amazon-aws)](http://expo-nextjs-template-stage.s3-website-eu-west-1.amazonaws.com/)
+[![deploy-web-stage](https://github.com/rdok/expo-nextjs-template/workflows/deploy-web-stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3Adeploy-web-stage)
 
+***
+
+[![expo-stage-blue](https://img.shields.io/badge/Mobile%20Apps-Stage-blue?style=flat-square&logo=expo)](https://expo.io/@rdok/expo-nextjs-template?release-channel=stage)
 [![build-mobile-stage](https://github.com/rdok/expo-nextjs-template/workflows/build-mobile-stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3Abuild-mobile-stage)
 [![publish-mobile-stage](https://github.com/rdok/expo-nextjs-template/workflows/publish-mobile-stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3Apublish-mobile-stage)
-[![deploy-web-stage](https://github.com/rdok/expo-nextjs-template/workflows/deploy-web-stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3Adeploy-web-stage)
 
 
 ## Stage Setup
@@ -17,6 +20,9 @@
 - Trigger Terraform Cloud run.
 #### Deploy web app
 - Add environment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` to the GitHub repo secrets; said AWS IAM user should have policy rights to list, put, and delete objects for the bucket `{your-bucket-name}-stage`.
+- Modify `deploy-web-stage.yml` github action with your bucket name, without the `-stage`
+- Commit & push. Github action deployes web-app to http://expo-nextjs-template-stage.s3-website-eu-west-1.amazonaws.com/ 
+- TODO: Setup CDN
  
 
 This projects aims showcase, and act as template for setting expo with NextJS.
