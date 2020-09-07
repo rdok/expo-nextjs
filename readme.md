@@ -1,6 +1,6 @@
 # Expo NextJS Template
 [![web-stage](https://img.shields.io/badge/Web-Stage-blue?style=flat-square&logo=amazon-aws)](http://expo-nextjs-template-stage.s3-website-eu-west-1.amazonaws.com/)
-[![deploy-web-stage](https://github.com/rdok/expo-nextjs-template/workflows/deploy-web-stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3Adeploy-web-stage)
+[![deploy-web-stage](https://github.com/rdok/expo-nextjs-template/workflows/Deploy%20Web%20Stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3A%22Deploy+Web+Stage%22)
 
 ***
 
