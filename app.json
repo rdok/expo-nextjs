@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "expo-nextjs-template",
+    "slug": "expo-nextjs-template",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "description": "This projects aims to act as a template, and showcase using expo & nextjs.",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rdok.expo-nextjs-template"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.rdok.expo_nextjs_template"
+    }
+  }
+}
