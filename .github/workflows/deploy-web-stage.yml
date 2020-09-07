@@ -2,13 +2,12 @@ name: deploy-web-stage
 on:
   push:
     branches: master
-env:
-  ENVIRONMENT: stage
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     env:
-      WEBSITE_BUCKET: web-app-name
+      ENVIRONMENT: stage
+      WEBSITE_BUCKET: expo-nextjs-template
       AWS_DEFAULT_REGION: eu-west-1
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

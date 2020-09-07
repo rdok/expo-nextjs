@@ -6,6 +6,19 @@
 [![deploy-web-stage](https://github.com/rdok/expo-nextjs-template/workflows/deploy-web-stage/badge.svg)](https://github.com/rdok/expo-nextjs-template/actions?query=workflow%3Adeploy-web-stage)
 
 
+## Stage Setup
+#### Create static web site
+- Modify `infrastructure` folder accordingly: Change the org organization, workspace, and bucket name.
+- Setup a terraform cloud workspace named `{your-project-name}-stage`
+    - Set terraform working directory `infrastructure`. 
+    - Enable always trigger run
+    - Add terraform variable `environment` with value `stage`
+    - Add environment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`; said AWS IAM user should have admin policy rights for the bucket `{your-bucket-name}-stage` you specified on previous steps.
+- Trigger Terraform Cloud run.
+#### Deploy web app
+- Add environment variables `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY` to the GitHub repo secrets; said AWS IAM user should have policy rights to list, put, and delete objects for the bucket `{your-bucket-name}-stage`.
+ 
+
 This projects aims showcase, and act as template for setting expo with NextJS.
 
 ## Web
