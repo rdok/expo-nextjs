@@ -1,21 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Text, Header, ThemeProvider} from 'react-native-elements';
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <Text>Expo NextJS Template</Text>
-            <StatusBar style="auto" />
-        </View>
-    );
-}
+        <ThemeProvider>
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
+            <Header
+                centerComponent={{ text: 'Expo NextJS Template', style: { color: '#fff' } }}
+            />
+
+            <Text h2>Expo NextJS Template</Text>
+
+        </ThemeProvider>
+    )
+}
