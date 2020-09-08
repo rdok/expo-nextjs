@@ -1,3 +1,5 @@
+yarn-error.log
+
 .expo-shared/
 node_modules/**/*
 .expo/*
