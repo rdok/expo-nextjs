@@ -2,7 +2,7 @@
 # When should I dispatch this action?
 #   See https://docs.expo.io/workflow/publishing/#limitations
 ################################################################################
-name: trigger-build-mobile-stage
+name: Trigger mobile build stage
 on:
   workflow_dispatch:
 env:
@@ -32,15 +32,7 @@ jobs:
       - run: yarn
       - run: npx expo login --non-interactive -u ${EXPO_USERNAME}
       - name: npx expo build:android
-        run: |
-          # base64 encoding value should have disabled wrapped lines; `cat app-name.jks  | base64 --wrap=0`
-          echo ${EXPO_ANDROID_KEYSTORE_JKS_BASE64} | base64 --decode > ${EXPO_ANDROID_KEYSTORE_PATH}
-          npx expo build:android \
-            --release-channel ${ENVIRONMENT} \
-            --keystore-alias ${EXPO_ANDROID_KEYSTORE_ALIAS} \
-            --keystore-path ${EXPO_ANDROID_KEYSTORE_PATH} \
-            --no-wait \
-            --type apk
+        run: npx expo build:android --release-channel ${ENVIRONMENT} --no-wait --type apk
       - name: Remove credentials
         if: ${{ always() }}
         run: |

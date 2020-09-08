@@ -2,7 +2,7 @@
 # Any time this action executes, a new version will be available immediately to
 # your users the next time they open it.
 ################################################################################
-name: publish-mobile-stage
+name: Publish mobile stage
 on:
   push:
     branches: master
